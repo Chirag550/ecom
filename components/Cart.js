@@ -11,7 +11,7 @@ import { usestatecontext } from "@/context/statecontext";
 import { urlfor } from "@/lib";
 import getStripe from "@/getstripe";
 
-const cart = () => {
+const Cart = () => {
   const cartRef = useRef();
   const {
     price,
@@ -75,6 +75,7 @@ const cart = () => {
                 <img
                   src={urlfor(item?.image[0])}
                   className="cart-product-image"
+                  alt={"heyy"}
                 />
                 <div className="item-desc">
                   <div className="flex top">
@@ -135,4 +136,4 @@ const cart = () => {
   );
 };
 
-export default cart;
+export default Cart;

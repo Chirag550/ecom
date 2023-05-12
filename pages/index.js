@@ -1,4 +1,4 @@
-import { Herobanner } from "@/components";
+import Herobanner from "@/components/Herobanner";
 import React from "react";
 import { client } from "@/lib";
 import { urlfor } from "@/lib";
@@ -16,7 +16,7 @@ const index = ({ products, bannerdata }) => {
       </div>
       <div className="products-container">
         {products.map((product) => (
-          <Product products={product} />
+          <Product key={product._id} products={product} />
         ))}
       </div>
 

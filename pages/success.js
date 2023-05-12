@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import BsBagCheckFill from "react-iccons/bs";
+import BsBagCheckFill from "react-icons/bs";
 
 import { usestatecontext } from "@/context/statecontext";
 
 import { runfire } from "@/utils";
-const success = () => {
+const Success = () => {
   const { setcaritems, setprice, settotalquanitities } = usestatecontext();
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const success = () => {
     setprice(0);
     settotalquanitities(0);
     runfire();
-  }, []);
+  });
 
   const [order, setOrder] = useState(null);
   return (
@@ -41,4 +41,4 @@ const success = () => {
   );
 };
 
-export default success;
+export default Success;
