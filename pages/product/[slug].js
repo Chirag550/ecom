@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import { Toast } from "react-hot-toast";
 import {
   AiOutlineMinus,
@@ -29,16 +30,18 @@ const ProductDetails = ({ product, products }) => {
       <div className="product-detail-container">
         <div>
           <div className="image-container">
-            <img
+            <Image
               src={urlfor(image && image[index])}
               className="product-detail-image"
+              alt="heyyy"
             />
           </div>
           <div className="small-images-container">
             {image?.map((item, i) => (
-              <img
+              <Image
                 key={i}
                 src={urlfor(item)}
+                alt="heyy"
                 className={
                   i === index ? "small-image selected-image" : "small-image"
                 }

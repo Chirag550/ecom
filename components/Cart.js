@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   AiOutlineMinus,
@@ -72,10 +73,10 @@ const Cart = () => {
           {cartitems?.length >= 1 &&
             cartitems.map((item) => (
               <div className="product" key={item._id}>
-                <img
+                <Image
                   src={urlfor(item?.image[0])}
                   className="cart-product-image"
-                  alt={"heyy"}
+                  alt="heyy"
                 />
                 <div className="item-desc">
                   <div className="flex top">
