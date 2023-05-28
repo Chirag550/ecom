@@ -33,10 +33,12 @@ const Cart = () => {
       },
       body: JSON.stringify(cartitems),
     });
+    console.log(response);
 
     if (response.statusCode === 500) return;
 
     const data = await response.json();
+    console.log(data);
 
     stripe.redirectToCheckout({ sessionId: data.id });
   };
