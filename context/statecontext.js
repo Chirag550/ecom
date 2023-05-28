@@ -104,6 +104,7 @@ export const StateContext = (props) => {
         remove,
         settotalquanitities,
         setcartitems,
+        setprice,
       }}
     >
       {props.children}

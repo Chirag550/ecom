@@ -5,15 +5,14 @@ import { BsBagCheckFill } from "react-icons/bs";
 import { usestatecontext } from "@/context/statecontext";
 
 import { runfire } from "@/utils";
-const Success = () => {
-  const { setcaritems, setprice, settotalquanitities } = usestatecontext();
+const success = () => {
+  const { setcartitems, setprice, settotalquanitities } = usestatecontext();
 
   useEffect(() => {
     localStorage.clear();
-    setcaritems([]);
+    setcartitems([]);
     setprice(0);
     settotalquanitities(0);
-    runfire();
   });
 
   const [order, setOrder] = useState(null);
@@ -41,4 +40,4 @@ const Success = () => {
   );
 };
 
-export default Success;
+export default success;
