@@ -5,7 +5,7 @@ import { BsBagCheckFill } from "react-icons/bs";
 import { usestatecontext } from "@/context/statecontext";
 
 import { runfire } from "@/utils";
-const success = () => {
+const Success = () => {
   const { setcartitems, setprice, settotalquanitities } = usestatecontext();
 
   useEffect(() => {
@@ -40,4 +40,4 @@ const success = () => {
   );
 };
 
-export default success;
+export default Success;
