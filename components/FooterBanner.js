@@ -13,6 +13,13 @@ const FooterBanner = ({ footerbanner }) => {
           <h3>{footerbanner.largeText2}</h3>
           <p>{footerbanner.saleTime}</p>
         </div>
+        <picture>
+          <img
+            src={urlfor(footerbanner.image)}
+            alt={"heyy"}
+            className="footer-banner-image"
+          />
+        </picture>
         <div className="right">
           <p>{footerbanner.smallText}</p>
           <h3>{footerbanner.midText}</h3>
@@ -22,11 +29,6 @@ const FooterBanner = ({ footerbanner }) => {
             <button type="button">{footerbanner.buttonText}</button>
           </Link>
         </div>
-        <Image
-          src={urlfor(footerbanner.image)}
-          alt={"heyy"}
-          className="footer-banner-image"
-        />
       </div>
     </div>
   );
