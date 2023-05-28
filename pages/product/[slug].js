@@ -40,7 +40,7 @@ const ProductDetails = ({ product, products }) => {
           </div>
           <div className="small-images-container">
             {image?.map((item, i) => (
-              <picture>
+              <picture key={i}>
                 <img
                   key={i}
                   src={urlfor(item)}
